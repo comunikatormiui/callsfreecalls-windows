@@ -103,6 +103,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="VM\BaseVM.cs" />
+    <Compile Include="VM\MainVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -125,6 +127,12 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Assets\Images\backgroun_00.jpg" />
+    <Resource Include="Assets\ThemeImages\login_background.png" />
+    <Resource Include="Assets\ThemeImages\input_line_conversation-.png" />
+    <Resource Include="Assets\ThemeImages\cfc.png" />
+    <Resource Include="Assets\ThemeImages\input_line_error.png" />
+    <Resource Include="Assets\ThemeImages\fingerprint.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

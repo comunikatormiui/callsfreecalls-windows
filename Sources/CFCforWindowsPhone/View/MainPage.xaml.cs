@@ -8,18 +8,38 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using CFCforWindowsPhone.Resources;
+using CFCforWindowsPhone.VM;
 
 namespace CFCforWindowsPhone
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private MainVM _viewModel = new MainVM();
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+            DataContext = _viewModel;
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            _viewModel.PasswordTextBoxGotFocus();
+        }
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            _viewModel.PasswordTextBoxLostFocus();
+
         }
 
         // Sample code for building a localized ApplicationBar
