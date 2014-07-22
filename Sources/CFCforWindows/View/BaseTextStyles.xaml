@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:core="clr-namespace:System;assembly=mscorlib" >
+
+    <core:Double x:Key="PhoneFontSizeSmall">9.334</core:Double>
+    <core:Double x:Key="PhoneFontSizeNormal">10</core:Double>
+    <core:Double x:Key="PhoneFontSizeMedium">12</core:Double>
+    <core:Double x:Key="PhoneFontSizeMediumLarge">13</core:Double>
+    <core:Double x:Key="PhoneFontSizeLarge">16</core:Double>
+    <core:Double x:Key="PhoneFontSizeExtraLarge">21.334</core:Double>
+    <core:Double x:Key="PhoneFontSizeExtraExtraLarge">36</core:Double>
+    <core:Double x:Key="PhoneFontSizeHuge">93.334</core:Double>
+
+    <Style x:Key="PhoneTextNormalStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
+</ResourceDictionary>

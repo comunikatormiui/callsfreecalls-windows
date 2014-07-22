@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFCforWindowsPhone", "CFCforWindowsPhone\CFCforWindowsPhone.csproj", "{F03D500F-6B17-469C-A1CD-8CA42CCA28B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFCPortableCommon", "CFCPortableCommon\CFCPortableCommon.csproj", "{CFD5C6B2-FE11-4D16-AABC-AC433B915DB3}"
