@@ -3,3 +3,6 @@ obj
 *.suo
 *.user
 */StyleCop.Cache
+Sources/packages/Newtonsoft.Json.6.0.3
+Sources/packages/RestSharp.104.4.0
+Sources/packages/Newtonsoft.Json.6.0.3/lib/net20/Newtonsoft.Json.dll
