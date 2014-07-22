@@ -31,6 +31,17 @@ namespace CFCforWindowsPhone
 
         }
 
+        private void LoginText_GotFocus(object sender, RoutedEventArgs e)
+        {
+            _viewModel.LoginTextBoxGotFocus();
+        }
+
+        private void LoginText_LostFocus(object sender, RoutedEventArgs e)
+        {
+            _viewModel.LoginTextBoxLostFocus();
+
+        }
+
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             _viewModel.PasswordTextBoxGotFocus();

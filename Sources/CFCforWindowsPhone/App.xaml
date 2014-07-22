@@ -8,6 +8,11 @@
     <!--Application Resources-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:CFCforWindowsPhone" x:Key="LocalizedStrings"/>
+        <ResourceDictionary x:Key="MainDictionary">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/CFCforWindowsPhone;component/View/LoginPageStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

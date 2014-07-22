@@ -10,6 +10,24 @@ namespace CFCforWindowsPhone.VM
     public class MainVM : BaseVM
     {
         private bool _isCfcImageVisible = true;
+        private string _login = string.Empty;
+        private bool _isLoginFocused;
+
+        public string Login
+        {
+            get { return _login; }
+            set { _login = value; NotifyPropertyChanged("Login"); }
+        }
+
+        public string LoginText
+        {
+            get { return string.IsNullOrWhiteSpace(_login) ? "E-mail Address" : _login; }
+        }
+
+        public Visibility LoginTextVisibility
+        {
+            get { return _isLoginFocused || !string.IsNullOrWhiteSpace(_login) ? Visibility.Collapsed : Visibility.Visible; }
+        }
 
         public bool IsCfcImageVisible
         {
@@ -47,6 +65,24 @@ namespace CFCforWindowsPhone.VM
         internal void PasswordTextBoxLostFocus()
         {
             IsCfcImageVisible = true;
+        }
+
+        internal void LoginTextBoxGotFocus()
+        {
+            IsCfcImageVisible = false;
+            _isLoginFocused = true;
+            NotifyPropertyChanged("LoginText");
+            NotifyPropertyChanged("Login");
+            NotifyPropertyChanged("LoginTextVisibility");
+        }
+
+        internal void LoginTextBoxLostFocus()
+        {
+            IsCfcImageVisible = true;
+            _isLoginFocused = false;
+            NotifyPropertyChanged("LoginText");
+            NotifyPropertyChanged("Login");
+            NotifyPropertyChanged("LoginTextVisibility");
         }
     }
 }

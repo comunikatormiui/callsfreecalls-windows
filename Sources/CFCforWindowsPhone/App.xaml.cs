@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using CFCforWindowsPhone.Resources;
+using CFCforWindowsPhone.VM;
 
 namespace CFCforWindowsPhone
 {
@@ -55,6 +56,7 @@ namespace CFCforWindowsPhone
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+            AppVM.Instance.Initialize();
         }
 
         // Code to execute when the application is launching (eg, from Start)
