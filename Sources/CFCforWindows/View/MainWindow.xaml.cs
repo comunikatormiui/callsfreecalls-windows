@@ -29,5 +29,19 @@ namespace CFCforWindows.View
             _viewModel = new MainVM();
             DataContext = _viewModel;
         }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+
+            try
+            {
+                DragMove();
+            }
+            catch (Exception ex)
+            {
+                ////Logger.Instance.WriteError("MainWindow::OnMouseLeftButtonDown", "Drag move exception", ex);
+            }
+        }
     }
 }
