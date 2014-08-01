@@ -82,7 +82,7 @@
                            Margin="12,24" FontSize="{StaticResource PhoneFontSizeMediumLarge}"
                            HorizontalAlignment="Center" VerticalAlignment="Top"/>-->
 
-                <PasswordBox Style="{Binding PasswordBoxOnLoginPageStyle}"
+                <PasswordBox Style="{Binding PasswordBoxOnLoginPageStyle}" Name="UserPassword"
                              Margin="12,4" Width="360"
                              FontSize="{StaticResource PhoneFontSizeMediumLarge}"
                              GotFocus="TextBox_GotFocus"
@@ -99,7 +99,7 @@
             <Grid Grid.Row="4" Margin="{Binding LoginButtonMargin}">
                 <Image Grid.Row="1" Source="/CFCforWindowsPhone;component/Assets/ThemeImages/fingerprint.png"
                        Stretch="Fill"
-                       VerticalAlignment="Top" HorizontalAlignment="Center" />
+                       VerticalAlignment="Top" HorizontalAlignment="Center" Tap="Image_Tap" />
             </Grid>
 
             <!-- LOCALIZATION NOTE:

@@ -53,6 +53,12 @@ namespace CFCforWindowsPhone
 
         }
 
+        private void Image_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            _viewModel.Password = UserPassword.Password;
+            _viewModel.LoginExecute();
+        }
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{

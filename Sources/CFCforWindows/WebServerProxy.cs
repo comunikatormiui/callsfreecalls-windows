@@ -58,11 +58,15 @@ namespace CFCforWindowsPhone
 
         public static string Login(string username, string password)
         {
+            string resourceAddress = "http://localhost:1867/api/v1.0/login";
 
-            string resourceAddress = "https://mac4.ixcglobal.com/login";
+            //string resourceAddress = "http://mac4.ixcglobal.com:8081/login";
+            ////string resourceAddress = "https://mac4.ixcglobal.com:443/login";
+            ////string resourceAddress = "https://mac4.ixcglobal.com/login";
+
             ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(AcceptAllCertifications);
 
-            SendByRestRequest(resourceAddress);
+            //// -- SendByRestRequest(resourceAddress);
 
 
 
