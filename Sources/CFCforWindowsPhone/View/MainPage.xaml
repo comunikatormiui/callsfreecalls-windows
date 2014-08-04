@@ -64,7 +64,7 @@
                            Visibility="{Binding LoginTextVisibility}"
                            HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-                <TextBox Text="{Binding Login, Mode=TwoWay}"
+                <TextBox Name="UserLogin" Text="{Binding Login, Mode=TwoWay}"
                          Style="{StaticResource TextBoxOnLoginPageStyle}"
                          GotFocus="LoginText_GotFocus" 
                          LostFocus="LoginText_LostFocus" Width="360"
@@ -78,22 +78,17 @@
                        Stretch="Fill"
                        VerticalAlignment="Top" HorizontalAlignment="Center" />
 
-                <!--<TextBlock Text="*********" Style="{StaticResource PhoneTextNormalStyle}"
+                <TextBlock Text="Password" Style="{StaticResource PhoneTextNormalStyle}"
                            Margin="12,24" FontSize="{StaticResource PhoneFontSizeMediumLarge}"
-                           HorizontalAlignment="Center" VerticalAlignment="Top"/>-->
+                           Visibility="{Binding PasswordTextVisibility}"
+                           HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-                <PasswordBox Style="{Binding PasswordBoxOnLoginPageStyle}" Name="UserPassword"
-                             Margin="12,4" Width="360"
+                <PasswordBox Style="{StaticResource PasswordBoxOnLoginPageStyle}" Name="UserPassword"
+                             Margin="12,4" Width="360" HorizontalContentAlignment="Center"
                              FontSize="{StaticResource PhoneFontSizeMediumLarge}"
                              GotFocus="TextBox_GotFocus"
                              LostFocus="TextBox_LostFocus"
                              HorizontalAlignment="Center" VerticalAlignment="Top" />
-                
-                <!--<TextBox Text="*********" GotFocus="TextBox_GotFocus" 
-                         Style="{StaticResource TextBoxOnLoginPageStyle}"
-                         LostFocus="TextBox_LostFocus"
-                         Margin="12,21" FontSize="{StaticResource PhoneFontSizeMediumLarge}"
-                         HorizontalAlignment="Center" VerticalAlignment="Top"/>-->
             </Grid>
 
             <Grid Grid.Row="4" Margin="{Binding LoginButtonMargin}">

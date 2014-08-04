@@ -15,6 +15,7 @@ namespace CFCforWindowsPhone.VM
         private string _login = string.Empty;
         private string _password = string.Empty;
         private bool _isLoginFocused;
+        private bool _isPasswordFocused;
         private WebProxy _web;
 
         public string Login
@@ -37,6 +38,11 @@ namespace CFCforWindowsPhone.VM
         public Visibility LoginTextVisibility
         {
             get { return _isLoginFocused || !string.IsNullOrWhiteSpace(_login) ? Visibility.Collapsed : Visibility.Visible; }
+        }
+
+        public Visibility PasswordTextVisibility
+        {
+            get { return _isPasswordFocused || !string.IsNullOrWhiteSpace(_password) ? Visibility.Collapsed : Visibility.Visible; }
         }
 
         public bool IsCfcImageVisible
@@ -79,11 +85,15 @@ namespace CFCforWindowsPhone.VM
         internal void PasswordTextBoxGotFocus()
         {
             IsCfcImageVisible = false;
+            _isPasswordFocused = true;
+            NotifyPropertyChanged("PasswordTextVisibility");
         }
 
         internal void PasswordTextBoxLostFocus()
         {
             IsCfcImageVisible = true;
+            _isPasswordFocused = false;
+            NotifyPropertyChanged("PasswordTextVisibility");
         }
 
         internal void LoginTextBoxGotFocus()

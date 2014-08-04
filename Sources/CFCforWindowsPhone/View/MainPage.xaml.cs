@@ -38,6 +38,7 @@ namespace CFCforWindowsPhone
 
         private void LoginText_LostFocus(object sender, RoutedEventArgs e)
         {
+            _viewModel.Login = UserLogin.Text;
             _viewModel.LoginTextBoxLostFocus();
 
         }
@@ -49,6 +50,7 @@ namespace CFCforWindowsPhone
 
         private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
+            _viewModel.Password = UserPassword.Password;
             _viewModel.PasswordTextBoxLostFocus();
 
         }
